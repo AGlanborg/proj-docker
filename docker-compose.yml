@@ -1,0 +1,23 @@
+version: '3'
+networks:
+  app:
+services:
+  api:
+    image: aglanborg/proj-backend
+    container_name: node
+    restart: always
+    ports:
+      - '3000:3000'
+    environment:
+      PORT: 3000
+    networks:
+      app:
+  client:
+    image: aglanborg/proj-frontend
+    container_name: vue
+    ports:
+      - '8080:8080'
+    depends_on:
+      - api
+    networks:
+      app:
