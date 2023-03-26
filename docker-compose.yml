@@ -7,9 +7,9 @@ services:
     container_name: node
     restart: always
     ports:
-      - '3000:3000'
+      - '8081:8081'
     environment:
-      PORT: 3000
+      PORT: 8081
     networks:
       app:
   client:
