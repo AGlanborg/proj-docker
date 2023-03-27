@@ -10,8 +10,11 @@ services:
       - '8081:8081'
     environment:
       PORT: 8081
+      SYSTEM: "Linux"
     networks:
       app:
+    volumes:
+      - 'C:\licenses:/licenses'
   client:
     image: "aglanborg/proj-frontend:latest"
     container_name: vue
