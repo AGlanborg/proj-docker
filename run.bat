@@ -5,4 +5,4 @@ docker-compose pull
 
 start chrome "http://localhost:8080/"
 
-docker-compose up
+docker-compose up -d
